@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지와 피규어</title>
+  </head>
+  <body>
+    <h1>이미지 삽입하기</h1>
+    <img
+      src="/src/assets/food/cake.jpeg"
+      alt="Peace of Cake(한 조각의 평화) - 밀크쉐이크, 더블치즈, 수플레 치즈, 초코 티라미수, 데블스 초코"
+    />
+    <br />
+    <img
+      src="/src/assets/food/icecream.webp"
+      alt="밴앤제리스 파인트 아이스크림"
+    />
+    <!-- alt엔 이미지에 있는 정보를 주기, 이미지를 보지 못하는 사용자들을 고려해야한다. -->
+    <!-- webp(웹피) - 차세대 이미지 파일 : jpg, jpeg보다 용량이 작다. 최적화에 용이 -->
+
+    <!-- 벡터이미지 -->
+    <svg
+      aria-label="채팅하기"
+      class="h-12 w-12"
+      viewBox="0 0 40 40"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+          <stop stop-color="#2397B3" offset="0%"></stop>
+          <stop stop-color="#13577E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
+          <stop stop-color="#73DFF2" offset="0%"></stop>
+          <stop stop-color="#47B1EB" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <g fill="none" fill-rule="evenodd">
+        <path
+          d="M28.872 22.096c.084.622.128 1.258.128 1.904 0 7.732-6.268 14-14 14-2.176 0-4.236-.496-6.073-1.382l-6.022 2.007c-1.564.521-3.051-.966-2.53-2.53l2.007-6.022A13.944 13.944 0 0 1 1 24c0-7.331 5.635-13.346 12.81-13.95A9.967 9.967 0 0 0 13 14c0 5.523 4.477 10 10 10a9.955 9.955 0 0 0 5.872-1.904z"
+          fill="url(#a)"
+          transform="translate(1 1)"
+        ></path>
+        <path
+          d="M35.618 20.073l2.007 6.022c.521 1.564-.966 3.051-2.53 2.53l-6.022-2.007A13.944 13.944 0 0 1 23 28c-7.732 0-14-6.268-14-14S15.268 0 23 0s14 6.268 14 14c0 2.176-.496 4.236-1.382 6.073z"
+          fill="url(#b)"
+          transform="translate(1 1)"
+        ></path>
+        <path
+          d="M18 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM24 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM30 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+          fill="#FFF"
+        ></path>
+      </g>
+    </svg>
+    <!-- 
+      svg로 이미지를 코드로 삽입하여 직접 수정이 가능하다. 
+      서버에 요청하지 않아도 된다.img태그는 이미지를 서버에 요청하는것.
+      alt를 따로 줘야한다 : aria-label = "채팅하기"
+      -->
+    <br />
+    <img
+      src="/src/assets/svg/chitchat.svg"
+      alt="채팅하기"
+      width="50"
+      height="50"
+    />
+    <!-- 성능 측면에서 마크업에서 width height 지정하는것이 훨씬 좋다. reflow repaint가 적게 발생됨 -->
+    <!-- alt는 상황과 맥락에 따라 다르게 적어줘야한다. 이미지를 설명하는것이 아님 -->
+  </body>
+</html>
