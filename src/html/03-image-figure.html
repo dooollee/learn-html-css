@@ -7,6 +7,7 @@
   </head>
   <body>
     <h1>이미지 삽입하기</h1>
+    <h2>이미지 요소</h2>
     <img
       src="/src/assets/food/cake.jpeg"
       alt="Peace of Cake(한 조각의 평화) - 밀크쉐이크, 더블치즈, 수플레 치즈, 초코 티라미수, 데블스 초코"
@@ -26,6 +27,7 @@
       viewBox="0 0 40 40"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>채팅 하기</title>
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
           <stop stop-color="#2397B3" offset="0%"></stop>
@@ -54,9 +56,11 @@
       </g>
     </svg>
     <!-- 
-      svg로 이미지를 코드로 삽입하여 직접 수정이 가능하다. 
-      서버에 요청하지 않아도 된다.img태그는 이미지를 서버에 요청하는것.
-      alt를 따로 줘야한다 : aria-label = "채팅하기"
+      -svg로 이미지를 코드로 삽입하여 직접 수정이 가능하다. 
+      -서버에 요청하지 않아도 된다.img태그는 이미지를 서버에 요청하는것.
+      -alt를 따로 줘야한다 : aria-label = "채팅하기" 
+      -근데 이건 aria-lable 상호작용하는 <a> <button>과 같이.. 요소에 사용하는거라 적절하진 않음
+      -<title>을 추가해주는게 좀 더 적절함
       -->
     <br />
     <img
@@ -67,5 +71,34 @@
     />
     <!-- 성능 측면에서 마크업에서 width height 지정하는것이 훨씬 좋다. reflow repaint가 적게 발생됨 -->
     <!-- alt는 상황과 맥락에 따라 다르게 적어줘야한다. 이미지를 설명하는것이 아님 -->
+    <br />
+    <h2>피규어 요소</h2>
+    <figure>
+      <img
+        src="/src/assets/drama/good-partner-narrow.webp"
+        alt="굿파트너"
+        width="280"
+        height="400"
+        loading="lazy"
+      />
+      <!-- 
+      alt를 비워놓으면 스크린 리더는 읽어주지 않는다. 대신 figcaption을 읽어준다.
+      그러나 seo가 떨어짐 , 검색엔진최적화
+
+      lazy loading은 필요할 때만 로딩함
+      -->
+
+      <figcaption>드라마 굿파트너</figcaption>
+      <!-- 이미지에 대한 캡션,설명 -->
+    </figure>
+    <!-- 캡션을 지정할 수 있는 컨테이너 -->
+    <br />
+    <figure>
+      <img
+        src="/src/assets/drama/mon-friend-son-narrow.webp"
+        alt="엄마 친구 아들, 새로운 에피소드 지금 시청하기"
+      />
+      <figcaption>엄마 친구 아들 - 티빙 시리즈</figcaption>
+    </figure>
   </body>
 </html>
