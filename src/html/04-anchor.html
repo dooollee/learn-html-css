@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하이퍼링크</title>
+  </head>
+  <body>
+    <h1>하이퍼링크</h1>
+    <h2>택스트 링크</h2>
+    <a href="https://bootcamp.likelion.net/" target="_blank"
+      >멋쟁이 사자처럼 부트캠프</a
+    >
+    <br />
+    <a href="https://github.com/" target="_blank">깃헙</a>
+    <!-- _blank : blank라는 창이 있나 없나 검색해서 없으면 blank창에 띄우는 것
+    so 그냥 blank하면 안됨-->
+    <br />
+    <a
+      href="https://naver.com/"
+      title="네이버 사이트로 이동합니다.(새창)"
+      rel="noopener noreferrer"
+      >네이버
+    </a>
+    <!-- global속성 : 어디에나 써도되는 공통 속성 / title id class 등
+     title : 툴팁
+     rel : noopener - 신뢰하지 않는 웹을 열 때, 원본문서를 보호해주는 기능, target="_blank"와 함께 사용
+     -->
+    <br />
+    <h2>이미지 링크</h2>
+    <a href="https://www.apple.com/kr/"
+      ><img
+        src="/src/assets/apple/apple_watch.jpeg"
+        alt="애플 워치"
+        width="200"
+    /></a>
+    <h2>pdf 링크</h2>
+    <a
+      href="/src/assets/pdf/google-seo-guide-ko.pdf"
+      download="google-seo-guide-ko.pdf"
+      >구글 SEO 가이드</a
+    >
+    <br />
+    <h2>전화번호 또는 이메일 주소로 하이퍼 링크</h2>
+    <a href="mailto:dooollee@naver.com?subject=문의사항">dooollee@naver.com</a>
+    <!-- 메일 클라이언트 실행 -->
+    <br />
+    <a href="tel:+821023456789">고객센터 010-2345-6789</a>
+
+    <hr />
+    <h2>하이퍼링크 및 이미지 UI 예제</h2>
+
+    <figure>
+      <img src="/src/assets/cafew/card-02-@1x.jpg" alt="카페" />
+      <figcaption>
+        <p>
+          RESPONSIVE WEB<br />
+          DESIGN STRATEGIES<br />
+        </p>
+        <p>반응형 웹 디자인 전략</p>
+      </figcaption>
+      <a href="http://www.github.com" target="_blank">강의정보</a>
+    </figure>
+  </body>
+</html>
